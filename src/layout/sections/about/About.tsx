@@ -50,6 +50,4 @@ const AboutText = styled.p`
   }
 `;
 
-// const VerticalLine = styled.div`
-// `
 
