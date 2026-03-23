@@ -21,6 +21,10 @@ export const HeaderMenu = (props: { menuItems: Array<MenuItemPropsType> }) => {
 };
 
 const StyledHeaderMenu = styled.nav`
+  @media ${theme.media.mobile} {
+    display: none; 
+  }
+  
   ul {
     display: flex;
     justify-content: center;
@@ -38,7 +42,7 @@ const StyledHeaderItem = styled.li`
     min-width: 80px;
     height: 45px;
     text-align: center;
-    border: ${theme.colors.borderColor};
+    border: 1px solid ${theme.colors.borderColor};
     background: ${theme.colors.accent};
     color: ${theme.colors.buttonText};
   }
