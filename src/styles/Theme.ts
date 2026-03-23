@@ -10,6 +10,11 @@ export const theme = {
     buttonText: "#1d1d1e",
 
     borderColor: "1px solid rgba(255, 255, 255, 0.1)"
+  },
+
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)"
   }
 }
 

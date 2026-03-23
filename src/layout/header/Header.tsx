@@ -3,6 +3,7 @@ import {Logo} from "../../components/logo/Logo.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {HeaderMenu} from "../../components/menu/HeaderMenu.tsx";
+import {MobileMenu} from "../../components/menu/MobileMenu.tsx";
 
 
 const items = [
@@ -22,6 +23,7 @@ export const Header = (props: { id: string }) => {
         >
           <Logo />
           <HeaderMenu menuItems={items} />
+          <MobileMenu menuItems={items} />
         </FlexWrapper>
       </Container>
     </StyledHeader>

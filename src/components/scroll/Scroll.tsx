@@ -18,17 +18,13 @@ const StyledScroll = styled.a`
   position: absolute;
   bottom: 30px;
   left: 50%;
-  transform: translateX(-50%);
-  
+  //transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  
   width: 40px; 
   height: 40px;
-  
   transition: opacity 0.3s ease;
-  
   animation: ${bounce} 2s infinite ease-in-out;
 
   &:hover {

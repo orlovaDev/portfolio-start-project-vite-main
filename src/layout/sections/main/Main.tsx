@@ -5,6 +5,7 @@ import {Container} from "../../../components/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
 import {Scroll} from "../../../components/scroll/Scroll.tsx";
 import {MainLink} from "../../../components/mainLink/MainLink.tsx";
+// import photo from "./../../../assets/images/photo.webp"
 
 export const Main = (props: { id: string }) => {
   return (
@@ -32,6 +33,11 @@ export const Main = (props: { id: string }) => {
             height={'330'}
             viewBox={'0 0 460 330'}
           />
+
+          {/*<StyledPhoto*/}
+          {/*  src={photo}*/}
+          {/*  alt="img"*/}
+          {/*/>*/}
         </FlexWrapper>
         <Scroll />
       </Container>
@@ -43,7 +49,7 @@ const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
 `
 
 const ContentWrapper = styled.div`
@@ -79,7 +85,12 @@ const StyledText = styled.p`
   color: ${theme.colors.font};
   margin-bottom: 20px;
 `
-
+// const StyledPhoto = styled.img`
+//   max-width: 460px;
+//   width: 100%;
+//   height: 450px;
+//   object-fit: cover;
+// `
 
 
 

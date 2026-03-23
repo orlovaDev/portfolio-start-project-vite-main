@@ -13,13 +13,12 @@ const StyledLinkLogo = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
-  transition: transform 0.3s ease-in-out;
+  //transition: transform 0.3s ease-in-out;
 
-  &:hover {
-    //transform: scale(1.02);
-    filter: brightness(1.1);
-  }
+  //&:hover {
+  //  transform: scale(1.02);
+  //  filter: brightness(1.1);
+  //}
 `
 
 
