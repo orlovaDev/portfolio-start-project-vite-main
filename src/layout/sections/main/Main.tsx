@@ -5,7 +5,6 @@ import {Container} from "../../../components/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
 import {Scroll} from "../../../components/scroll/Scroll.tsx";
 import {MainLink} from "../../../components/mainLink/MainLink.tsx";
-// import photo from "./../../../assets/images/photo.webp"
 
 export const Main = (props: { id: string }) => {
   return (
@@ -14,7 +13,7 @@ export const Main = (props: { id: string }) => {
         <FlexWrapper
           align={'center'}
           justify={'space-between'}
-          wrap={'wrap'}
+          wrap={'wrap-reverse'}
           height={'100%'}
         >
           <ContentWrapper>
@@ -33,11 +32,6 @@ export const Main = (props: { id: string }) => {
             height={'330'}
             viewBox={'0 0 460 330'}
           />
-
-          {/*<StyledPhoto*/}
-          {/*  src={photo}*/}
-          {/*  alt="img"*/}
-          {/*/>*/}
         </FlexWrapper>
         <Scroll />
       </Container>
@@ -49,7 +43,6 @@ const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
   position: relative;
-  //overflow: hidden;
 `
 
 const ContentWrapper = styled.div`
@@ -60,6 +53,11 @@ const ContentWrapper = styled.div`
   gap: 20px;
   text-align: left;
   max-width: 515px;
+
+  @media ${theme.media.mobile} {
+    align-items: center;    
+    text-align: center;
+  }
 `
 
 const StyledMainTitle = styled.h1`
@@ -85,12 +83,7 @@ const StyledText = styled.p`
   color: ${theme.colors.font};
   margin-bottom: 20px;
 `
-// const StyledPhoto = styled.img`
-//   max-width: 460px;
-//   width: 100%;
-//   height: 450px;
-//   object-fit: cover;
-// `
+
 
 
 

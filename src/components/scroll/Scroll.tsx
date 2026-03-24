@@ -1,5 +1,6 @@
 import styled, {keyframes} from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
+import {theme} from "../../styles/Theme.ts";
 
 export const Scroll = () => {
   return (
@@ -27,6 +28,10 @@ const StyledScroll = styled.a`
   transition: opacity 0.3s ease;
   animation: ${bounce} 2s infinite ease-in-out;
 
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+  
   &:hover {
     animation-play-state: paused; 
     opacity: 0.7;

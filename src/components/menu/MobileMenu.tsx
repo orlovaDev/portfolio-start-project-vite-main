@@ -28,7 +28,7 @@ export const MobileMenu = (props: { menuItems: Array<MenuItemPropsType> }) => {
 
 const StyledMobileMenu = styled.nav`
   display: none;
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     display: block;
   }
 `
@@ -64,8 +64,6 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
   width: 40px;
   height: 40px;
   z-index: 99999;
-  //background: transparent;
-  //border: none;
   cursor: pointer;
   
   span {

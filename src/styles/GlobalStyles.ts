@@ -46,6 +46,20 @@ export const GlobalStyle = createGlobalStyle`
   
   section{
     padding: 80px 0;
+    
+    @media ${theme.media.tablet} {
+      padding: 60px 0;
+    }
+
+    @media ${theme.media.mobile} {
+      padding: 40px 0;
+    }
   }
-  
+
+  h1, h2, h3, p {
+    @media ${theme.media.mobile} {
+      word-break: break-word; /* Чтобы длинные слова не ломали верстку */
+    }
+  }
 `
+

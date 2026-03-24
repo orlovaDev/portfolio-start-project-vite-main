@@ -21,7 +21,7 @@ export const HeaderMenu = (props: { menuItems: Array<MenuItemPropsType> }) => {
 };
 
 const StyledHeaderMenu = styled.nav`
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     display: none; 
   }
   
@@ -29,7 +29,7 @@ const StyledHeaderMenu = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
   }
 `
 
@@ -37,7 +37,7 @@ const StyledHeaderItem = styled.li`
   transition: all 0.3s ease-in-out;
 
   &:last-child a {
-    border-radius: 30px;  //6px
+    border-radius: 30px;  
     padding: 10px;
     min-width: 80px;
     height: 45px;
