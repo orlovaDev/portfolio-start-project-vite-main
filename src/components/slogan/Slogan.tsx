@@ -18,6 +18,11 @@ const StyledSlogan = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 60px;
+
+  @media ${theme.media.tablet} {
+    gap: 30px; 
+    //margin-bottom: 20px; 
+  }
 `
 
 const SloganTitle = styled.h2`
@@ -27,6 +32,10 @@ const SloganTitle = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media ${theme.media.mobile} {
+    font-size: 25px;
+  }
 `
 
 const SloganText = styled.p`
@@ -34,4 +43,8 @@ const SloganText = styled.p`
   font-size: 20px;
   line-height: 1.5;
   color: ${theme.colors.font};
+
+  @media ${theme.media.mobile} {
+    font-size: 14px;
+  }
 `

@@ -7,7 +7,6 @@ export const About = (props: { id: string }) => {
   return (
     <StyledAbout id={props.id}>
       <Container>
-        {/*<VerticalLine>*/}
           <SectionTitle>About me</SectionTitle>
           <AboutText>The long barrow was built on land previously inhabited in
             the
@@ -18,7 +17,6 @@ export const About = (props: { id: string }) => {
             cremated human remains were placed within this chamber during the
             Neolithic period, representing at least nine or ten
             individuals.</AboutText>
-        {/*</VerticalLine>*/}
       </Container>
     </StyledAbout>
   );
@@ -68,7 +66,6 @@ const AboutText = styled.p`
       display: none; 
     }
   }
-  
 `;
 
 

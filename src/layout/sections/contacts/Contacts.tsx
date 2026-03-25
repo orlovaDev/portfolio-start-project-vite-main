@@ -42,6 +42,14 @@ export const Contacts = (props: { id: string }) => {
 };
 
 const StyledContacts = styled.section`
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      flex-direction: column;
+      align-items: center; 
+      text-align: center;
+    }
+  }
+  
 `
 
 const StyledForm = styled.form`
@@ -51,7 +59,6 @@ const StyledForm = styled.form`
   flex-direction: column;
   gap: 25px;
   margin: 0 auto;
-  //padding: 0 15px;
   box-sizing: border-box;
   
   textarea {
@@ -62,6 +69,12 @@ const StyledForm = styled.form`
     resize: none;
     overflow: auto;
   }
+
+  button {
+    @media ${theme.media.mobile} {
+      width: 100%; 
+    }
+  }
 `
 
 const StyledLabel = styled.label`
@@ -71,6 +84,11 @@ const StyledLabel = styled.label`
   display: flex;
   flex-direction: column;
   gap: 6px;
+
+  @media ${theme.media.mobile} {
+    font-size: 12px;
+    align-items: flex-start;
+  }
 `
 
 const Field = styled.input`
@@ -95,17 +113,15 @@ const Field = styled.input`
     filter: brightness(1.2);
     box-shadow: 0 10px 20px rgba(74, 130, 218, 0.3);
   }
-
-  // &:-webkit-autofill {
-  //   /* Чтобы автозаполнение браузера не портило темный фон */
-  //   transition: background-color 5000s ease-in-out 0s;
-  //   -webkit-text-fill-color: ${theme.colors.font};
-  // }
-
+  
   &::placeholder {
     font-weight: 400;
     font-size: 14px;
     color: #919b9b;
+
+    @media ${theme.media.mobile} {
+      font-size: 12px;
+    }
   }
 `;
 

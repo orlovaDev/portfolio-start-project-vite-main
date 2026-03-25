@@ -3,6 +3,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 const skillsData = [
   { iconId: 'js', title: 'JAVASCRIPT'},
@@ -42,5 +43,14 @@ export const Skills = (props: { id: string }) => {
 };
 
 const StyledSkills = styled.section`
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      gap: 40px;
+    }
+
+    @media ${theme.media.mobile} {
+      gap: 30px 20px; 
+    }
+  }
 `
 

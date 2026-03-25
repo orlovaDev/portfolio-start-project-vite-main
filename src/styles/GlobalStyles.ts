@@ -61,5 +61,9 @@ export const GlobalStyle = createGlobalStyle`
       word-break: break-word; // Чтобы длинные слова не ломали верстку 
     }
   }
+
+  img {
+    max-width: 100%; height: auto;
+  }
 `
 

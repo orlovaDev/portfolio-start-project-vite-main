@@ -20,7 +20,7 @@ export const Footer = () => {
           gap={"30px"}
         >
           <Name>Anastasiya</Name>
-          <SocialMenu>
+          <nav>
             <SocialList>
               {socialData.map(s => (
                 <SocialItem key={s.id}>
@@ -31,7 +31,7 @@ export const Footer = () => {
                 </SocialItem>
               ))}
             </SocialList>
-          </SocialMenu>
+          </nav>
           <SmallText>WEB DEVELOPER 2026</SmallText>
         </FlexWrapper>
       </Container>
@@ -42,15 +42,21 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.primaryBg};
   padding: 100px 0 20px 0;
+  
+  @media ${theme.media.tablet} {
+    padding: 50px 0 20px 0; 
+  }
 `
 const Name = styled.span`
   font-weight: 400;
   font-size: 15px;
   color: ${theme.colors.font};
   text-transform: uppercase;
-`
 
-const SocialMenu = styled.nav``
+  @media ${theme.media.mobile} {
+    font-size: 13px;
+  }
+`
 
 const SocialList = styled.ul`
   display: flex;
@@ -73,6 +79,10 @@ const SocialItem = styled.li`
     text-transform: uppercase;
     text-align: center;
     color: ${theme.colors.font};
+
+    @media ${theme.media.mobile} {
+      font-size: 10px;
+    }
   }
 `
 const SocialLink = styled.a`
@@ -97,4 +107,8 @@ const SmallText = styled.span`
   letter-spacing: 0.04em;
   text-align: center;
   color: ${theme.colors.font};
+  
+  @media ${theme.media.mobile} {
+    font-size: 9px;
+  }
 `
