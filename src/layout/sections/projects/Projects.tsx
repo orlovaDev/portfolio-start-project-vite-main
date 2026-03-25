@@ -7,6 +7,7 @@ import project3 from "./../../../assets/images/proj-3.webp";
 import project4 from "./../../../assets/images/proj-4.webp";
 import {Container} from "../../../components/Container.ts";
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme.ts";
 
 const worksItemsOne = ["JAVASCRIPT", "POSTGRESQL", "REACT", "REDUX"]
 const worksItemsTwo = ["JAVASCRIPT", "REACT NATIVE", "REDUX"]
@@ -59,6 +60,11 @@ export const Projects = (props: { id: string }) => {
 };
 
 const StyledProjects = styled.section`
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      gap: 20px;
+    }
+  }
 `
 
 

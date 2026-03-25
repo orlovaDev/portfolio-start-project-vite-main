@@ -9,7 +9,7 @@ export const theme = {
     headerText: "#d7e5ec",
     buttonText: "#1d1d1e",
 
-    borderColor: "1px solid rgba(255, 255, 255, 0.1)"
+    borderColor: "rgba(255, 255, 255, 0.1)"
   },
 
   media: {

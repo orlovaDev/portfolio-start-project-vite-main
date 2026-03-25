@@ -19,13 +19,12 @@ const StyledScroll = styled.a`
   position: absolute;
   bottom: 30px;
   left: 50%;
-  //transform: translateX(-50%);
+  transform: translateX(-50%);  //Указываем начальное состояние
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px; 
   height: 40px;
-  transition: opacity 0.3s ease;
   animation: ${bounce} 2s infinite ease-in-out;
 
   @media ${theme.media.tablet} {
@@ -33,7 +32,6 @@ const StyledScroll = styled.a`
   }
   
   &:hover {
-    animation-play-state: paused; 
-    opacity: 0.7;
+    animation-play-state: paused;
   }
 `;

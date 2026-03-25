@@ -52,13 +52,13 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @media ${theme.media.mobile} {
-      padding: 40px 0;
+      padding: 30px 0;
     }
   }
 
   h1, h2, h3, p {
     @media ${theme.media.mobile} {
-      word-break: break-word; /* Чтобы длинные слова не ломали верстку */
+      word-break: break-word; // Чтобы длинные слова не ломали верстку 
     }
   }
 `

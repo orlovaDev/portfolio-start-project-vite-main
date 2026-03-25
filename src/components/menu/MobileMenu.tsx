@@ -1,3 +1,4 @@
+import {useEffect, useState} from "react";
 import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme.ts";
 
@@ -7,17 +8,37 @@ type MenuItemPropsType = {
 }
 
 export const MobileMenu = (props: { menuItems: Array<MenuItemPropsType> }) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  // Блокировка скролла
+  useEffect(() => {
+    if (menuIsOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // отменяем блокировку скролла
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuIsOpen]);
+
+  const onBurgerBtnClick = () => setMenuIsOpen(!menuIsOpen);
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
        <span>
        </span>
       </BurgerButton>
-      <MobileMenuPopup isOpen={true}>
-        <ul>
+
+      <MobileMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
+        <ul onClick={e => e.stopPropagation()}>
           {props.menuItems.map((item, index) => (
             <StyledItem key={index}>
-              <Link href={`#${item.href}`}>{item.title}</Link>
+              <Link href={`#${item.href}`} onClick={() => setMenuIsOpen(false)}>
+                {item.title}
+              </Link>
             </StyledItem>
           ))}
         </ul>
@@ -33,83 +54,84 @@ const StyledMobileMenu = styled.nav`
   }
 `
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-  }
-  
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 9999;
-  background-color: rgba(24, 31, 50, 0.98);
-  display: none;
+  background-color: rgba(1, 15, 35, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
 
-  ${props => props.isOpen && css<{ isOpen: boolean }>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  ${props => props.isOpen && css`
+    transform: translateY(0);
   `}
-`
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+`;
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: 20px;
+  right: 20px;
   width: 40px;
   height: 40px;
   z-index: 99999;
-  cursor: pointer;
-  
+
   span {
     display: block;
     width: 36px;
-    height: 3px;
+    height: 2px;
     background: ${theme.colors.accent};
     position: absolute;
-    left: 5px;
-    bottom: 20px;
+    left: 2px;
+    border-radius: 5px;
+    transition: background 0.2s ease-in-out;
 
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
-      background: rgba(255, 255, 255, 0);
+    ${props => props.isOpen && css`
+      background: transparent;
     `}
-    
-    &::before {
+
+    &::before, &::after {
       content: '';
       display: block;
       width: 36px;
       height: 2px;
+      border-radius: 5px;
       background: ${theme.colors.accent};
       position: absolute;
-      transform: translateY(-10px);
+      transition: transform 0.3s ease-in-out, width 0.3s;
+    }
 
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
+    &::before {
+      transform: translateY(-10px);
+      ${props => props.isOpen && css`
         transform: rotate(-45deg) translateY(0);
       `}
     }
 
     &::after {
-      content: '';
-      display: block;
-      width: 25px;
-      height: 2px;
-      background: ${theme.colors.accent};
-      position: absolute;
+      width: 24px;
       right: 0;
       transform: translateY(10px);
-
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
+      ${props => props.isOpen && css`
         width: 36px;
         transform: rotate(45deg) translateY(0);
       `}
     }
   }
-`
+`;
 
 const StyledItem = styled.li`
   transition: all 0.3s ease-in-out;

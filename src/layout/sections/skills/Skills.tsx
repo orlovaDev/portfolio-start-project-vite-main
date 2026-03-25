@@ -22,7 +22,6 @@ const skillsData = [
   { iconId: 'git', title: 'GIT'}
 ]
 
-
 export const Skills = (props: { id: string }) => {
   return (
     <StyledSkills id={props.id}>
