@@ -9,7 +9,7 @@ import {Container} from "../../../components/Container.ts";
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
 
-const worksItemsOne = ["JAVASCRIPT", "POSTGRESQL", "REACT", "REDUX"]
+const worksItemsOne = ["JAVASCRIPT", "REACT", "REDUX"]
 const worksItemsTwo = ["JAVASCRIPT", "REACT NATIVE", "REDUX"]
 const projectsData = [
   {

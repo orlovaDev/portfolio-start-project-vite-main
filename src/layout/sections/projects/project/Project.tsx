@@ -79,7 +79,7 @@ const WrapperContentProject = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
-  padding: 0 25px;
+  padding: 0 25px 30px;
 
   @media ${theme.media.mobile} {
   padding: 0 15px; 
