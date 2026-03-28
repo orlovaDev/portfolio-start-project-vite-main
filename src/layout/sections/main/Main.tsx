@@ -149,6 +149,7 @@ const StyledText = styled.p`
   @media ${theme.media.mobile} {
     font-size: 14px;
     letter-spacing: 0.04em;
+    text-align: justify;
   }
 `
 

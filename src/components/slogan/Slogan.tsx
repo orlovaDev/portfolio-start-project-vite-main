@@ -35,6 +35,7 @@ const SloganTitle = styled.h2`
 
   @media ${theme.media.mobile} {
     font-size: 25px;
+    text-align: justify;
   }
 `
 
@@ -46,5 +47,6 @@ const SloganText = styled.p`
 
   @media ${theme.media.mobile} {
     font-size: 14px;
+    text-align: justify;
   }
 `
