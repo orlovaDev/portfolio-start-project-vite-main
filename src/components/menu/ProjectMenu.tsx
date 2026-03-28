@@ -39,7 +39,7 @@ const Tech = styled.span`
   color: ${theme.colors.buttonText};
   border-radius: 30px;
   border: 1px solid ${theme.colors.borderColor};
-  font-weight: 400;
+  font-weight: 500;
   font-size: 10px;
   line-height: 1;
   letter-spacing: 1px;
