@@ -9,10 +9,6 @@ export const SectionTitle = styled.h2`
   color: ${theme.colors.font};
   margin-bottom: 40px;
   
-  @media ${theme.media.tablet} {
-    
-  }
-
   &::after {
     content: "";
     display: block;

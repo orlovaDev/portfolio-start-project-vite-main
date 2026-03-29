@@ -1,21 +1,12 @@
 import styled, {keyframes} from "styled-components";
-import {Icon} from "../icon/Icon.tsx";
-import {theme} from "../../styles/Theme.ts";
-
-export const Scroll = () => {
-  return (
-    <StyledScroll href="#about">
-      <Icon iconId={'scroll'} width={'18'} height={'28'} viewBox="0 0 18 28"/>
-    </StyledScroll>
-  );
-};
+import {theme} from "../../../../styles/Theme.ts";
 
 const bounce = keyframes`
   0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1;}
   50% { transform: translateX(-50%) translateY(10px); opacity: 0.5;}
 `;
 
-const StyledScroll = styled.a`
+const Scroll = styled.a`
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -35,3 +26,7 @@ const StyledScroll = styled.a`
     animation-play-state: paused;
   }
 `;
+
+export const S = {
+  Scroll,
+}

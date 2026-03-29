@@ -1,4 +1,4 @@
-import {Logo} from "../../components/logo/Logo.tsx";
+import {Logo} from "./logo/Logo.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";

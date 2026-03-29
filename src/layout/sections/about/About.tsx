@@ -1,14 +1,14 @@
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Container} from "../../../components/Container.ts";
-import {theme} from "../../../styles/Theme.ts";
+import React from "react";
+import {S} from "./About_Styles.ts"
 
-export const About = (props: { id: string }) => {
+export const About: React.FC<{ id: string }> = (props) => {
   return (
-    <StyledAbout id={props.id}>
+    <S.About id={props.id}>
       <Container>
           <SectionTitle>About me</SectionTitle>
-          <AboutText>The long barrow was built on land previously inhabited in
+          <S.Text>The long barrow was built on land previously inhabited in
             the
             Mesolithic period. It consisted of a sub-rectangular earthen
             tumulus,
@@ -16,56 +16,12 @@ export const About = (props: { id: string }) => {
             built from sarsen megaliths on its eastern end. Both inhumed and
             cremated human remains were placed within this chamber during the
             Neolithic period, representing at least nine or ten
-            individuals.</AboutText>
+            individuals.</S.Text>
       </Container>
-    </StyledAbout>
+    </S.About>
   );
 };
 
-const StyledAbout = styled.section`
-  padding-top: 140px;
-  
-  @media ${theme.media.tablet} {
-    padding-top: 30px;
-  }
-`
 
-const AboutText = styled.p`
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  color: ${theme.colors.font};
-  position: relative;
-  padding-left: 25px;
-  
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%; 
-    width: 5px;
-    background: ${theme.colors.accent};
-    border-radius: 2px;
-    transform: none; 
-  }
-
-  @media ${theme.media.tablet} {
-    font-size: 16px;
-    &::before {
-      width: 3px; 
-    }
-  }
-
-  @media ${theme.media.mobile} {
-    text-align: justify;
-    font-size: 14px;
-    padding-left: 0; 
-    &::before { 
-      display: none; 
-    }
-  }
-`;
 
 

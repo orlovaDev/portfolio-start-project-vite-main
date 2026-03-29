@@ -1,15 +1,7 @@
 import styled from "styled-components";
-import {theme} from "../../styles/Theme.ts";
+import {theme} from "../../../../styles/Theme.ts";
 
-export const MainLink = () => {
-  return (
-    <StyledLink href="#contacts">
-      Contact Me
-    </StyledLink>
-  );
-};
-
-const StyledLink = styled.a`
+const Link = styled.a`
   border-radius: 30px; 
   padding: 10px 20px;
   min-width: 80px;
@@ -36,6 +28,7 @@ const StyledLink = styled.a`
     filter: brightness(1.03);
     box-shadow: 0 10px 20px rgba(74, 130, 218, 0.3);
   }
-  
-  
 `
+export const S = {
+  Link,
+}

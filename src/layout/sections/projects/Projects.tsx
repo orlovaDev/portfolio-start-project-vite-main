@@ -8,6 +8,7 @@ import project4 from "./../../../assets/images/proj-4.webp";
 import {Container} from "../../../components/Container.ts";
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
+import React from "react";
 
 const worksItemsOne = ["JAVASCRIPT", "REACT", "REDUX"]
 const worksItemsTwo = ["JAVASCRIPT", "REACT NATIVE", "REDUX"]
@@ -38,7 +39,7 @@ const projectsData = [
   }
 ]
 
-export const Projects = (props: { id: string }) => {
+export const Projects: React.FC<{ id: string }> = (props) => {
   return (
     <StyledProjects id={props.id}>
       <Container>
