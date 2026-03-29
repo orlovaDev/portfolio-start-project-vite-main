@@ -1,4 +1,4 @@
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {Container} from "../../../components/Container.ts";
 import {Scroll} from "./scroll/Scroll.tsx";
@@ -6,7 +6,7 @@ import {Link} from "./link/Link.tsx";
 import React from "react";
 import {S} from "././Main_Styles.ts";
 
-export const Main: React.FC<{ id: string }> = (props) => {
+export const Main: React.FC<{ id: string }> = (props: { id: string }) => {
   return (
     <S.Main id={props.id}>
       <Container>

@@ -1,4 +1,4 @@
-import {ProjectMenu} from "../../../../components/menu/ProjectMenu.tsx";
+import {ProjectMenu} from "./projectMenu/ProjectMenu.tsx";
 import React from "react";
 import {S} from "./Project_Styles.ts"
 
@@ -9,7 +9,7 @@ type ProjectPropsType = {
   item: Array<string>
 }
 
-export const Project: React.FC<ProjectPropsType> = (props) => {
+export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
   return (
     <S.Project>
       <S.Image

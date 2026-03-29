@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
+import React from "react";
 
 const skillsData = [
   { iconId: 'js', title: 'JAVASCRIPT'},
@@ -23,7 +24,7 @@ const skillsData = [
   { iconId: 'git', title: 'GIT'}
 ]
 
-export const Skills = (props: { id: string }) => {
+export const Skills: React.FC<{ id: string }> = (props: { id: string }) => {
   return (
     <StyledSkills id={props.id}>
       <Container>

@@ -1,22 +1,7 @@
 import styled from "styled-components";
-import {theme} from "../../styles/Theme.ts";
+import {theme} from "../../../../../styles/Theme.ts";
 
-
-export const ProjectMenu = (props: { menuItems: Array<string> }) => {
-  return (
-    <StyledProjectMenu>
-      <ul>
-        {props.menuItems.map((item, index) => {
-          return <li key={index}>
-            <Tech>{item}</Tech>
-          </li>
-        })}
-      </ul>
-    </StyledProjectMenu>
-  );
-};
-
-const StyledProjectMenu = styled.div`
+const ProjectMenu = styled.div`
   margin-bottom: 20px;
   width: 100%;
   
@@ -46,3 +31,8 @@ const Tech = styled.span`
   text-transform: uppercase;
   white-space: nowrap; //Чтобы название не переносилось 
 `
+
+export const S = {
+  ProjectMenu,
+  Tech,
+}

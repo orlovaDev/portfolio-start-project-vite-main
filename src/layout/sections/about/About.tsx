@@ -1,9 +1,9 @@
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {Container} from "../../../components/Container.ts";
 import React from "react";
 import {S} from "./About_Styles.ts"
 
-export const About: React.FC<{ id: string }> = (props) => {
+export const About: React.FC<{ id: string }> = (props: { id: string }) => {
   return (
     <S.About id={props.id}>
       <Container>

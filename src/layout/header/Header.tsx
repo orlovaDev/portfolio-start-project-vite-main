@@ -1,6 +1,6 @@
 import {Logo} from "./logo/Logo.tsx";
 import {Container} from "../../components/Container.ts";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.ts";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
 import React from "react";
@@ -14,7 +14,7 @@ const items = [
   {title: "Contact", href: "contacts"}
 ]
 
-export const Header: React.FC<{ id: string }> = (props) => {
+export const Header: React.FC<{ id: string }> = (props: { id: string }) => {
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 768;
 

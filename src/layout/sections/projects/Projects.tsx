@@ -1,6 +1,6 @@
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {Project} from "./project/Project.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import project1 from "./../../../assets/images/proj-1.webp";
 import project2 from "./../../../assets/images/proj-2.webp";
 import project3 from "./../../../assets/images/proj-3.webp";
@@ -39,7 +39,7 @@ const projectsData = [
   }
 ]
 
-export const Projects: React.FC<{ id: string }> = (props) => {
+export const Projects: React.FC<{ id: string }> = (props: { id: string }) => {
   return (
     <StyledProjects id={props.id}>
       <Container>

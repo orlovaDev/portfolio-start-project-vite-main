@@ -1,19 +1,7 @@
 import styled from "styled-components";
-import {theme} from "../../styles/Theme.ts";
+import {theme} from "../../../../styles/Theme.ts";
 
-export const Slogan = () => {
-  return (
-    <StyledSlogan>
-      <SloganTitle>I’m available for a exciting new project. Let’s
-        Talk.</SloganTitle>
-      <SloganText>You can send me a message here OR contact me on any social networks. We
-        can grab a coffee and talk it over a phone.
-      </SloganText>
-    </StyledSlogan>
-  );
-};
-
-const StyledSlogan = styled.div`
+const Slogan = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +13,7 @@ const StyledSlogan = styled.div`
   }
 `
 
-const SloganTitle = styled.h2`
+const Title = styled.h2`
   font-weight: 500;
   font-size: clamp(32px, 5vw, 50px);
   background: ${theme.colors.accent};
@@ -39,7 +27,7 @@ const SloganTitle = styled.h2`
   }
 `
 
-const SloganText = styled.p`
+const Text = styled.p`
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
@@ -50,3 +38,8 @@ const SloganText = styled.p`
     text-align: justify;
   }
 `
+export const S = {
+  Slogan,
+  Title,
+  Text,
+}

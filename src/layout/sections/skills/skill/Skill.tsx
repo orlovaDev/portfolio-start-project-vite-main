@@ -1,15 +1,15 @@
 import {Icon} from "../../../../components/icon/Icon.tsx";
-import styled from "styled-components";
-import {theme} from "../../../../styles/Theme.ts";
+import {S} from "./Skill_Styles.ts";
+import React from "react";
 
 type SkillPropsType = {
   iconId: string
   title: string
 }
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
   return (
-    <StyledSkill>
+    <S.Skill>
       <Icon
         iconId={props.iconId}
         // width={"120"}
@@ -17,40 +17,8 @@ export const Skill = (props: SkillPropsType) => {
         viewBox={"0 0 120 120"}
       >
       </Icon>
-      <SkillTitle>{props.title}</SkillTitle>
-    </StyledSkill>
+      <S.Title>{props.title}</S.Title>
+    </S.Skill>
   );
 };
 
-const StyledSkill = styled.div`
-  max-width: 120px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  transition: transform 0.3s ease;
-
-  svg {
-    width: 120px;
-    height: 120px;
-
-    @media ${theme.media.mobile} {
-      width: 80px;  
-      height: 80px;
-    }
-  }
-`
-
-const SkillTitle = styled.h3`
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-align: center;
-  color: ${theme.colors.font};
-
-  @media ${theme.media.mobile} {
-    font-size: 12px; 
-  }
-`
