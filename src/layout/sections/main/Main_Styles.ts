@@ -59,6 +59,9 @@ const MainTitle = styled.h1`
   font-weight: 400;
   font-size: 30px;
   color: ${theme.colors.headerText};
+  p {
+    display: none;
+  }
 
     @media ${theme.media.mobile} {
     font-size: 18px;

@@ -5,6 +5,7 @@ import {Scroll} from "./scroll/Scroll.tsx";
 import {Link} from "./link/Link.tsx";
 import React from "react";
 import {S} from "././Main_Styles.ts";
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC<{ id: string }> = (props: { id: string }) => {
   return (
@@ -17,7 +18,17 @@ export const Main: React.FC<{ id: string }> = (props: { id: string }) => {
           height={'100%'}
         >
           <S.ContentWrapper>
-            <S.MainTitle>WEB DEVELOPER</S.MainTitle>
+            {/*<S.MainTitle>WEB DEVELOPER</S.MainTitle>*/}
+            <S.MainTitle>
+              <p>WEB DEVELOPER</p>
+              <Typewriter
+              options={{
+                strings: ['WEB DEVELOPER', 'FRONTEND DEVELOPER'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+            </S.MainTitle>
             <S.Name>Anastasiya Orlova</S.Name>
             <S.Text>Amet minim mollit non deserunt ullamco est sit aliqua
               dolor do amet sint. Velit officia consequat duis enim velit

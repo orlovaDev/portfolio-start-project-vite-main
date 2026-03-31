@@ -6,11 +6,13 @@ import {Skills} from "./layout/sections/skills/Skills.tsx";
 import {Projects} from "./layout/sections/projects/Projects.tsx";
 import {Contacts} from "./layout/sections/contacts/Contacts.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
+import Particle from "./components/particle/Particle.tsx";
 
 
 function App() {
   return (
     <div className="App">
+      <Particle/>
       <Header id={"header"} />
       <Main id={"main"} />
       <About id={"about"} />
