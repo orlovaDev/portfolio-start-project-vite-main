@@ -9,7 +9,7 @@ export const SvgGradients: React.FC = () => {
     >
       <defs>
         {/* Градиент для NestJS */}
-        <linearGradient id="nest_grad" x1="0.5" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
+        <linearGradient id="paint0_linear_1_3284" x1="0" y1="1" x2="0" y2="0">
           <stop stopColor="#FFB199" />
           <stop offset="1" stopColor="#FF0844" />
         </linearGradient>
