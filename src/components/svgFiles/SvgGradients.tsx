@@ -8,18 +8,17 @@ export const SvgGradients: React.FC = () => {
       focusable="false"
     >
       <defs>
-        {/* Градиент Nest */}
-        <linearGradient id="nest_grad" x1="60" y1="120" x2="60" y2="0" gradientUnits="userSpaceOnUse">
+        {/* Градиент для NestJS */}
+        <linearGradient id="nest_grad" x1="0.5" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
           <stop stopColor="#FFB199" />
           <stop offset="1" stopColor="#FF0844" />
         </linearGradient>
 
-        {/* ПРАВИЛЬНЫЙ паттерн для Git (убрали <use>, вставили <image> напрямую) */}
+        {/* Паттерн для Git */}
         <pattern id="pattern0_114131_611" patternContentUnits="objectBoundingBox" width="1" height="1">
           <image
             href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX8AAAF/..."
-            width="1"
-            height="1"
+            x="0" y="0" width="1" height="1"
             preserveAspectRatio="none"
           />
         </pattern>
