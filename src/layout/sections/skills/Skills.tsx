@@ -35,7 +35,7 @@ export const Skills: React.FC<{ id: string }> = (props: { id: string }) => {
           justify={'center'}
           gap={'80px'}
         >
-          <Fade cascade={true} damping={0.2}>
+          <Fade cascade={true} damping={0.2} triggerOnce={true}>
             {skillsData.map((s, index) => (
               <Skill
                 key={index}
@@ -53,11 +53,11 @@ export const Skills: React.FC<{ id: string }> = (props: { id: string }) => {
 const StyledSkills = styled.section`
   ${FlexWrapper} {
     @media ${theme.media.tablet} {
-      gap: 40px;
+      gap: 70px;
     }
 
     @media ${theme.media.mobile} {
-      gap: 30px 20px;
+      gap: 50px;
     }
   }
 `

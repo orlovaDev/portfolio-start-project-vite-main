@@ -1,12 +1,11 @@
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
-import {Icon} from "../../../components/icon/Icon.tsx";
 import {Container} from "../../../components/Container.ts";
 import {Scroll} from "./scroll/Scroll.tsx";
 import React from "react";
 import {S} from "././Main_Styles.ts";
 import Typewriter from 'typewriter-effect';
 import {MainLink} from "./link/Link.tsx";
-// import myhoto from '../../../assets/images/photo.webp'
+import myphoto from '../../../assets/images/myphoto.webp'
 
 export const Main: React.FC<{ id: string }> = (props: { id: string }) => {
   return (
@@ -38,15 +37,9 @@ export const Main: React.FC<{ id: string }> = (props: { id: string }) => {
             <MainLink />
           </S.ContentWrapper>
           <S.IconWrapper>
-            {/*<S.Photo*/}
-            {/*  src={myhoto}*/}
-            {/*  alt="photo"*/}
-            {/*/>*/}
-            <Icon
-              iconId={'photo'}
-              width={'460'}
-              height={'330'}
-              viewBox={'0 0 460 330'}
+            <S.Photo
+              src={myphoto}
+              alt="photo"
             />
           </S.IconWrapper>
         </FlexWrapper>

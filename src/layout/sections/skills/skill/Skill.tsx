@@ -12,8 +12,8 @@ export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
     <S.Skill>
       <Icon
         iconId={props.iconId}
-        // width={"120"}
-        // height={"120"}
+        width={"120"}
+        height={"120"}
         viewBox={"0 0 120 120"}
       >
       </Icon>

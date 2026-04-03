@@ -9,10 +9,14 @@ const Skill = styled.div`
   align-items: center;
   gap: 20px;
   transition: transform 0.3s ease;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 
   svg {
     width: 120px;
     height: 120px;
+    flex-shrink: 0;
+    object-fit: contain;
 
     @media ${theme.media.mobile} {
       width: 80px;  

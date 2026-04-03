@@ -8,12 +8,14 @@ import Contacts from "./layout/sections/contacts/Contacts.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
 import Particle from "./components/particle/Particle.tsx";
 import {GoTopBtn} from "./components/goTopBtn/GoTopBtn.tsx";
+import {SvgGradients} from "./components/svgGradients/SvgGradients.tsx";
 
 
 function App() {
   return (
     <div className="App">
       <Particle/>
+      <SvgGradients/>
       <Header />
       <Main id={"main"} />
       <About id={"about"} />

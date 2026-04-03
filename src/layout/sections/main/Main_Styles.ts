@@ -33,32 +33,30 @@ const ContentWrapper = styled.div`
 const IconWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  flex-shrink: 1;
 
   @media screen and (max-width: 1121px) {
     justify-content: center;
     margin-bottom: 60px;
     width: 100%;
-    svg {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    }
   }
 
   @media ${theme.media.mobile} {
-    svg {
-      width: 70%;
-      max-width: 300px;
-      height: auto;
-    }
+    margin: 0 auto 60px;
+    width: 100%;
+    max-width: 310px;
   }
 `
-// const Photo = styled.img`
-//   width: 100%;
-//   max-width: 460px;
-//   height: 400px;
-//
-// `
+const Photo = styled.img`
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  object-fit: cover;
+
+  @media ${theme.media.mobile} {
+    max-width: 300px;
+  }
+`
 
 const MainTitle = styled.h1`
   font-family: "Tinos", sans-serif;
@@ -120,7 +118,7 @@ export const S = {
   Main,
   ContentWrapper,
   IconWrapper,
-  // Photo,
+  Photo,
   MainTitle,
   Name,
   Text,
