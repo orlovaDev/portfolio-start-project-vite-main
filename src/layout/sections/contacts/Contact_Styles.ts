@@ -21,6 +21,10 @@ const Form = styled.form`
   gap: 25px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  @media ${theme.media.tablet} {
+    width: 100%;
+  }
   
   textarea {
     box-sizing: border-box;

@@ -1,11 +1,17 @@
 import React from "react";
 import {S} from "././Link_Styles.ts"
 
-export const Link: React.FC = () => {
+export const MainLink: React.FC = () => {
   return (
-    <S.Link href="#contacts">
+    <S.MainLink
+      activeClass="active"
+      to={"contacts"}
+      spy={true}
+      smooth={true}
+      delay={300}
+    >
       Contact Me
-    </S.Link>
+    </S.MainLink>
   );
 };
 

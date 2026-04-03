@@ -2,6 +2,10 @@
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
 
+    <g id="gotop">
+        <path d="M6.80722 4.2806V15H9.19278V4.2806L14.3134 9.08118L16 7.5L8 0L0 7.5L1.6866 9.08118L6.80722 4.2806Z" fill="#E1EDFB"/>
+    </g>
+
     <g id="logo">
         <circle cx="20" cy="20" r="20" fill="url(#paint0_linear_13_3050)"/>
         <path d="M22.94 24.34H17.38L16.46 27H13.52L18.54 13.02H21.8L26.82 27H23.86L22.94 24.34ZM22.18 22.1L20.16 16.26L18.14 22.1H22.18Z"

@@ -53,6 +53,12 @@ const IconWrapper = styled.div`
     }
   }
 `
+// const Photo = styled.img`
+//   width: 100%;
+//   max-width: 460px;
+//   height: 400px;
+//
+// `
 
 const MainTitle = styled.h1`
   font-family: "Tinos", sans-serif;
@@ -114,6 +120,7 @@ export const S = {
   Main,
   ContentWrapper,
   IconWrapper,
+  // Photo,
   MainTitle,
   Name,
   Text,

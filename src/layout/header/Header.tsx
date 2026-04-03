@@ -7,14 +7,8 @@ import React from "react";
 import {S} from './Header_Styles.ts'
 
 
-const items = [
-  {title: "Home", href: "main"},
-  {title: "Projects", href: "projects"},
-  {title: "Skills", href: "skills"},
-  {title: "Contact", href: "contacts"}
-]
 
-export const Header: React.FC<{ id: string }> = (props: { id: string }) => {
+export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 768;
 
@@ -23,15 +17,15 @@ export const Header: React.FC<{ id: string }> = (props: { id: string }) => {
   }, []);
 
   return (
-    <S.Header id={props.id}>
+    <S.Header>
       <Container>
         <FlexWrapper
           justify={"space-between"}
           align={"center"}
         >
           <Logo />
-          {width < breakpoint ? <MobileMenu menuItems={items} />
-                              : <DesktopMenu menuItems={items} /> }
+          {width < breakpoint ? <MobileMenu />
+                              : <DesktopMenu /> }
         </FlexWrapper>
       </Container>
     </S.Header>

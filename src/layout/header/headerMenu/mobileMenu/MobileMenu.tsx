@@ -2,12 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Menu} from "../menu/Menu.tsx";
 import {S} from './../HeaderMenu_Styles.ts';
 
-type MenuItemPropsType = {
-  title: string
-  href: string
-}
-
-export const MobileMenu: React.FC<{menuItems: Array<MenuItemPropsType>}> = (props: { menuItems: Array<MenuItemPropsType> }) => {
+export const MobileMenu: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   // Блокировка скролла
@@ -32,8 +27,8 @@ export const MobileMenu: React.FC<{menuItems: Array<MenuItemPropsType>}> = (prop
        </span>
       </S.BurgerButton>
 
-      <S.MobileMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
-        <Menu menuItems={props.menuItems} />
+      <S.MobileMenuPopup isOpen={menuIsOpen}>
+        <Menu closeMenu={() => setMenuIsOpen(false)}/>
       </S.MobileMenuPopup>
     </nav>
   );

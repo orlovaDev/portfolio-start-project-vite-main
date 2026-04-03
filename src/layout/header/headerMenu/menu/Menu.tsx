@@ -1,17 +1,31 @@
 import React from "react";
 import {S} from './../HeaderMenu_Styles.ts'
 
-type MenuItemPropsType = {
-  title: string
-  href: string
+const items = [
+  {title: "Home", href: "main"},
+  {title: "Projects", href: "projects"},
+  {title: "Skills", href: "skills"},
+  {title: "Contact", href: "contacts"}
+]
+
+type MenuPropsType = {
+  closeMenu?: () => void;
 }
 
-export const Menu: React.FC<{menuItems: Array<MenuItemPropsType>}> = (props: { menuItems: Array<MenuItemPropsType> }) => {
+export const Menu: React.FC<MenuPropsType> = (props) => {
   return (
     <ul>
-      {props.menuItems.map((item, index) => (
+      {items.map((item, index) => (
         <S.MenuItem key={index}>
-          <S.Link href={`#${item.href}`}>{item.title}</S.Link>
+          <S.NavLink
+            activeClass="active"
+            to={item.href}
+            spy={true}
+            smooth={true}
+            delay={300}
+            // duration={300}
+            onClick={props.closeMenu}
+          >{item.title}</S.NavLink>
         </S.MenuItem>
       ))}
     </ul>

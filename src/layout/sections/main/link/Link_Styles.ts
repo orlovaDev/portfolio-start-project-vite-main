@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme.ts";
+import {Link} from "react-scroll";
 
-const Link = styled.a`
+const MainLink = styled(Link)`
   border-radius: 30px; 
   padding: 10px 20px;
   min-width: 80px;
@@ -30,5 +31,5 @@ const Link = styled.a`
   }
 `
 export const S = {
-  Link,
+  MainLink,
 }

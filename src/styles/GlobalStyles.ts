@@ -10,10 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
   }
-
-  html {
-    scroll-behavior: smooth;
-  }
+  //
+  //html {
+  //  scroll-behavior: smooth;
+  //}
   
   body {
     margin: 0;
@@ -52,7 +52,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @media ${theme.media.mobile} {
-      padding: 30px 0;
+      padding: 60px 0;
     }
   }
 

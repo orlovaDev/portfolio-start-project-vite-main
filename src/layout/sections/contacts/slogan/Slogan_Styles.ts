@@ -8,7 +8,8 @@ const Slogan = styled.div`
   gap: 60px;
 
   @media ${theme.media.tablet} {
-    gap: 30px; 
+    gap: 30px;
+    text-align: justify;
     //margin-bottom: 20px; 
   }
 `
@@ -20,7 +21,7 @@ const Title = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
+  
   @media ${theme.media.mobile} {
     font-size: 25px;
     text-align: justify;

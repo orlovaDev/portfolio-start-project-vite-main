@@ -1,10 +1,11 @@
 import {theme} from "../../../styles/Theme.ts";
 import styled, {css} from "styled-components";
+import {Link} from "react-scroll";
 
 //Menu
 
 const MenuItem = styled.li`
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 
   &:last-child a {
     border-radius: 30px;  
@@ -18,7 +19,7 @@ const MenuItem = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 
   &:last-child a:hover {
@@ -31,7 +32,7 @@ const MenuItem = styled.li`
   }
 `
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   font-weight: 500;
   font-size: 16px;
   color: ${theme.colors.font};
@@ -51,10 +52,10 @@ const Link = styled.a`
     height: 3px;
     border-radius: 20px;
     background: ${theme.colors.accent};
-    transition: width 0.5s ease-out;
+    transition: 0.5s ease-in-out;
   }
 
-  &:hover {
+  &:hover, &.active {
     filter: brightness(1.03);
     &::after {
       width: 100%;
@@ -77,23 +78,27 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
   align-items: center;
   
   transform: translateY(-100%);
-  transition: transform 0.4s ease-in-out;
-
-  ${props => props.isOpen && css`
-    transform: translateY(0);
-  `}
+  transition: 1s ease-in-out;
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 15px;
     align-items: center;
+    transition: .2s ease-in-out;
   }
+
+  ${props => props.isOpen && css`
+    transform: translateY(0);
+    & ul {
+      gap: 50px;
+    } 
+  `}
 `;
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
   position: fixed;
-  top: 20px;
+  top: 10px;
   right: 20px;
   width: 40px;
   height: 40px;
@@ -102,7 +107,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
   span {
     display: block;
     width: 36px;
-    height: 2px;
+    height: 3px;
     background: ${theme.colors.accent};
     position: absolute;
     left: 2px;
@@ -117,7 +122,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
       content: '';
       display: block;
       width: 36px;
-      height: 2px;
+      height: 3px;
       border-radius: 5px;
       background: ${theme.colors.accent};
       position: absolute;
@@ -156,7 +161,7 @@ const DesktopMenu = styled.nav`
 
 export const S = {
   MenuItem,
-  Link,
+  NavLink,
   MobileMenuPopup,
   BurgerButton,
   DesktopMenu,
