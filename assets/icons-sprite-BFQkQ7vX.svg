@@ -1,13 +1,10 @@
 <svg width="120" height="120" viewBox="0 0 120 120" fill="none"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <linearGradient id="paint0_linear_1_3116" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="135%" stop-color="#4a82da" />
-            <stop offset="0%" stop-color="#bad1f7" />
-            <stop offset="50%" stop-color="#2d507d" />
-        </linearGradient>
-    </defs>
+
+    <g id="gotop">
+        <path d="M6.80722 4.2806V15H9.19278V4.2806L14.3134 9.08118L16 7.5L8 0L0 7.5L1.6866 9.08118L6.80722 4.2806Z" fill="#E1EDFB"/>
+    </g>
 
     <g id="logo">
         <circle cx="20" cy="20" r="20" fill="url(#paint0_linear_13_3050)"/>
