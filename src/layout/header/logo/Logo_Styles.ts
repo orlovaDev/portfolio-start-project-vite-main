@@ -13,7 +13,7 @@ const Logo = styled.a`
     width: 40px;
     height: 40px;
     path {
-      fill: #252728; 
+      fill: #1F2626; 
     }
   }`
 export const S = {

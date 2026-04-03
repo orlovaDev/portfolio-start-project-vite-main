@@ -13,6 +13,7 @@ export const SvgGradients:React.FC = () => {
           <stop offset="1" stopColor="#FF0844" />
         </linearGradient>
       </defs>
+
     </svg>
   );
 };
