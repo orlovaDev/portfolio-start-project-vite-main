@@ -48,8 +48,11 @@ const SocialItem = styled.li`
   }
 `
 const SocialLink = styled.a`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   max-width: 70px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 
   &:hover {
     transform: scale(1.1);

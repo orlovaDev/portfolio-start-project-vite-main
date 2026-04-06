@@ -10,10 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
   }
-  //
-  //html {
-  //  scroll-behavior: smooth;
-  //}
   
   body {
     margin: 0;
@@ -32,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease-in-out;
   }
   
   ul {
